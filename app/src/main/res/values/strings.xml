@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Need7Minute</string>
+    <string name="logo_image">logo image</string>
+    <string name="start">START</string>
+    <string name="are_you_sure_want_to_quit_nthis_will_stop_your_today_s_on_progress_workout">Are you sure want to quit?\nThis will stop your today\'s on progress workout.</string>
+    <string name="yes">YES</string>
+    <string name="bmi">BMI</string>
+    <string name="calculate">Calculate</string>
+    <string name="calculator">Calculator</string>
+    <string name="bmi_calculator">BMI Calculator</string>
+    <string name="bmi_score">BMI Score</string>
+    <string-array name="weight_array">
+        <item>Kg</item>
+        <item>Pounds</item>
+    </string-array>
+    <string-array name="height_array">
+        <item>Cm</item>
+        <item>Meter</item>
+        <item>Feet</item>
+    </string-array>
+
+</resources>
