@@ -36,7 +36,7 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
     private var exerciseList: ArrayList<ExerciseModel>? = null
     private var currentExercisePosition = -1
     private var remainingTime: Long? = null
-    private var totalTime: Long = 30000
+    private var totalTime: Long = 1000
     private var pauseOffSet: Long = 0
     private var isPushed: Boolean = false
 
@@ -75,6 +75,7 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         val dialogBinding=CustomDialogOnBackpressedActivityBinding.inflate(layoutInflater)
         customDialog.setContentView(dialogBinding.root)
         customDialog.setCanceledOnTouchOutside(false)
+
         dialogBinding.yesBtn.setOnClickListener {
             this@ExerciseActivity.finish()
             customDialog.dismiss()
@@ -140,7 +141,7 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
     //setting the progressbar
     private fun setRestProgressBar() {
         binding.progressBar.progress = restProgress
-        resTimer = object : CountDownTimer(10000, 1000) {
+        resTimer = object : CountDownTimer(1000, 1000) {
             override fun onTick(millisUntilFinished: Long) {
                 restProgress++
                 binding.progressBar.progress = 10 - restProgress
@@ -183,11 +184,6 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
             }
 
             override fun onFinish() {
-//                Snackbar.make(
-//                    binding.exAcitvity,
-//                    "The 30sec for this exercise is over.",
-//                    Snackbar.LENGTH_SHORT
-//                ).show()
                 if (currentExercisePosition < exerciseList?.size!! - 1) {
                     //notifying the rv
                     exerciseList!![currentExercisePosition].setIsSelected(false)

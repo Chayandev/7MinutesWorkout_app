@@ -16,7 +16,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="@drawable/baseline_arrow_back_24"
         app:title="BMI Calculator"
-        app:titleTextColor="@color/white" />
+        app:titleTextColor="@color/white" >
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="end"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/image_bg"
+            />
+    </androidx.appcompat.widget.Toolbar>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bmi_layout"
@@ -54,7 +63,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:gravity="center"
             android:orientation="horizontal"
             android:weightSum="2"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -74,8 +82,8 @@
 
                 <ImageView
                     android:id="@+id/man_img"
-                    android:layout_width="130dp"
-                    android:layout_height="130dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:src="@drawable/baseline_man_24" />
 
                 <TextView
@@ -99,8 +107,8 @@
 
                 <ImageView
                     android:id="@+id/woman_img"
-                    android:layout_width="130dp"
-                    android:layout_height="130dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:src="@drawable/baseline_woman_24" />
 
                 <TextView
@@ -137,7 +145,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/input_weight_ll"
                 android:layout_width="0dp"
-                android:layout_height="80dp"
+                android:layout_height="60dp"
                 android:layout_marginRight="8dp"
                 android:layout_weight="2"
                 android:background="@drawable/input_box_bg"
@@ -194,7 +202,7 @@
             <Spinner
                 android:id="@+id/weight_spinner"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="60dp"
                 android:gravity="center"
                 android:entries="@array/weight_array"
                 android:layout_centerVertical="true"
@@ -237,7 +245,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/input_height_ll"
                 android:layout_width="0dp"
-                android:layout_height="80dp"
+                android:layout_height="60dp"
                 android:layout_marginRight="8dp"
                 android:layout_weight="2"
                 android:background="@drawable/input_box_bg"
@@ -294,7 +302,7 @@
             <Spinner
                 android:id="@+id/height_spinner"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="60dp"
                 android:gravity="center"
                 android:entries="@array/height_array"
                 android:layout_centerVertical="true"
@@ -327,7 +335,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="60dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/input_box_bg"
             android:paddingLeft="16dp"

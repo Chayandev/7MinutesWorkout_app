@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="sporty_bg">#baf146</color>
     <color name="sporty_bg_light_gray">#a0e50f</color>
+    <color name="lowOpac">#F4FEE1</color>
     <color name="screen_bg">#192225</color>
     <color name="tool_bar_bg">#D85E666C</color>
     <color name="pg_gray">#80cddbaa</color>

@@ -16,6 +16,32 @@
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="@drawable/baseline_arrow_back_24"
         app:title="History"
-        app:titleTextColor="@color/white" />
-
+        app:titleTextColor="@color/white" >
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="end"
+            android:layout_marginRight="8dp"
+           android:background="@drawable/image_bg"
+            />
+    </androidx.appcompat.widget.Toolbar>
+   <ProgressBar
+       android:id="@+id/pgBar"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintBottom_toBottomOf="parent"
+       />
+    <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="8dp"
+        tools:listitem="@layout/history_item_view"
+        app:layout_constraintTop_toBottomOf="@id/tool_bar_history" />
 </androidx.constraintlayout.widget.ConstraintLayout>
